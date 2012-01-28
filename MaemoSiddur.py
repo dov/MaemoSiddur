@@ -41,7 +41,7 @@ def load_prayer(prayer_num):
     txt = open(prayers[prayer_num][1]).read()
     tv.display_html("""
     <body xmlns='http://www.w3.org/1999/xhtml'>
-    <span style="font-family:AAA; font-size: +150%%">%s
+    <span style="font-family:Frank Ruehl CLM; font-size: +150%%">%s
     </span>
     </body>
     """%txt)

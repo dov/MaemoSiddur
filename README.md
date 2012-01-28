@@ -12,17 +12,26 @@ Windows from http://www.pygtk.org/downloads.html .
 MaemoSiddur is especially suited for the Maemo Linux environment 
 (therefore its name!) available on the Nokia N900 phone. MaemoSiddur supports flipping the pages by the volume keys, but to get that supported binary python module hardkeys.so must be copied to its the python directory, see below. (Please let me know if you want me to create a real installer!)
 
-There was no suitable free font available that was suitable for a siddur so 
-I modified the Culmus Frank-Ruehl font to add opentype tables for proper 
-nikud placement. The resulting fonts have been given the working name 
-AAA*.otf . 
+The font used is Culmus Frank Reuhl that was updated in December 2011 to include opentype tables for proper Nikud placement.
+
+# Prayer texts
+
+The Siddur currently comes with five books:
+
+* Shacharit ashekenaz (not finished)
+* Mincha
+* Maariv
+* Birkat hamazon
+* Megilat Esther
+
+The prayer texts are encoded in "conditional markups", where certain sections are made conditional on flags through the <cond flag="foo">...</fcond> specification. The flags are automatically calculated from the current date.
 
 # Maemo installation commands
 
     root
     mv arm*/hardkeys.so /opt/pymaemo/usr/lib/python2.5/site-packages/
     exit
-    cp AAA*.otf ~/.fonts
+    cp Frank* ~/.fonts
     python MaemoSiddor.py
 
 # Running 
@@ -39,7 +48,7 @@ which shows a list of support prayer books.
 
 # License
 
-This script is released under the GPL licence version 3.0
+This script is released under the GPL licence version 3.0 by Dov Grobgeld <dov.grobgeld@gmail.com>.
 
 Thanks to Jacob Tardell <python@tardell.se>, the author of the calendrial module.
 
